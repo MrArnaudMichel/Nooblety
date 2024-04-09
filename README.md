@@ -36,6 +36,7 @@ Vous pouvez accéder au site internet de **Nooblety** sur ce __[lien](https://no
 ## Installation
 #### Installer le Jeu
 
+> [!IMPORTANT]
 > __Remarque :__ Le jeu est disponible sur Windows, Linux et MacOS.
 > L'antivirus Windows Defender peut bloquer l'installation du jeu. Si c'est le cas, cliquez sur "Plus d'infos" puis sur "Exécuter quand même".
 > Si vous avez un message d'erreur lors de l'installation, vérifiez que vous avez assez d'espace disque disponible.
