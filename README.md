@@ -2,6 +2,14 @@
 
 ![Main image](images/Main%20image.png)
 
+![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-100000?style=for-the-badge&logo=c-sharp&logoColor=white)
+![PlantUML](https://img.shields.io/badge/PlantUML-100000?style=for-the-badge&logo=plantuml&logoColor=white)
+
+![GitHub](https://img.shields.io/github/license/MrArnaudMichel/Nooblety?style=for-the-badge)
+![GitHub Release Date](https://img.shields.io/github/repo-size/MrArnaudMichel/Nooblety?style=for-the-badge)
+
 ## Table des matières
 - [Contributeurs](#contributeurs)
 - [Description](#description)
