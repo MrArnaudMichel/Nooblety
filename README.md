@@ -1,4 +1,4 @@
-# T3 - MOD23-D
+# Nooblety
 
 ![Main image](images/Main%20image.png)
 
@@ -37,9 +37,9 @@ Une fois votre heure arrivée, le fils de votre personnage naît, vous prendrez 
 
 Le jeu se poursuit jusqu'à ce que votre personnage atteigne le statut de noble tant convoité ou jusqu'à la fin d'un nombre prédéfini de générations. Serez-vous capable de guider votre lignée vers la noblesse et la gloire dans cet univers médiéval exigeant ?
 
-## Guide
+## Site internet
 
-Vous pouvez accéder au site internet de **Nooblety** sur ce __[lien](https://nooblety.arnaudmichel.fr/)__. 
+Vous pouvez accéder au site internet de **Nooblety** sur ce **[lien](https://nooblety.arnaudmichel.fr/)**. 
 
 ## Installation
 #### Installer le Jeu
