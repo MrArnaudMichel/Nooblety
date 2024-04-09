@@ -7,8 +7,8 @@
 ![C#](https://img.shields.io/badge/C%23-100000?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![PlantUML](https://img.shields.io/badge/PlantUML-100000?style=for-the-badge&logo=plantuml&logoColor=white)
 
-![GitHub](https://img.shields.io/github/license/MrArnaudMichel/Nooblety?style=for-the-badge)
-![GitHub Release Date](https://img.shields.io/github/repo-size/MrArnaudMichel/Nooblety?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-100000?style=for-the-badge)
+![Repo size](https://img.shields.io/badge/Repo%20size-1.9GB-100000?style=for-the-badge)
 
 ## Table des matières
 - [Contributeurs](#contributeurs)
