@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMap.unity
+    guid: 23d8661265deed742959416ea58475f7
+  - enabled: 1
+    path: Assets/Scenes/FarmHouse.unity
+    guid: 692885fb3d086a34f8809e79d0bba79b
+  - enabled: 1
+    path: Assets/Scenes/BourgeoisHouse.unity
+    guid: 73e1fffa0b8a02943b6e5d64c0e4bb3c
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 194c36b178715c441ad26f372dd96064
+  m_configObjects: {}

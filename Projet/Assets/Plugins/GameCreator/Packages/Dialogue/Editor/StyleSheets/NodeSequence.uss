@@ -1,0 +1,18 @@
+#GC-Dialogue-Node-Sequence-Preview {
+    height: var(--gc-sequence-track-height);
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0 var(--gc-common-border-width) 0 0;
+    border-color: var(--gc-color-border-default);
+}
+
+#GC-Dialogue-Node-Sequence-Preview Image {
+    height: var(--gc-list-head-image-size);
+    width: var(--gc-list-head-image-size);
+    margin: var(--gc-list-head-image-margin);
+}
+
+.gc-dialogue-node-sequence-preview-on {
+    background-color: var(--gc-color-bg-active);
+}

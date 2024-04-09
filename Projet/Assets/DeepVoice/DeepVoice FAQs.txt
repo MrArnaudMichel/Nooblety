@@ -1,0 +1,27 @@
+Thank you for purchasing DeepVoice AI - Text to Voice
+
+This FAQ file contains general FAQs and frequently faced issues.
+
+- I just purchased this asset and cannot see my invoice number on the store. What do I do?
+
+If you have just purchased the asset, please allow Unity 2-4 hours to generate an invoice number, which you can use to access the DeepVoice generators. If this invoice number is not available even after 6 hours, please let us know at info@aikodex.com.
+
+- Can I use these voices in my game?
+
+Yes, you can use these voices for commercial purposes. You will have the copyright for all the voices you generate, thereby granting you full ownership of the voices created with DeepVoice. You can use the voices for all commercial activities.
+
+- I am getting an error when I click on "Generate Voice".
+
+There are different errors: 500 internal server error, 429 too many requests error, and 400 bad request error. The most common error is the 400 bad request error. Please do not include any special characters, quotes, or new lines in your prompt. Try not to copy and paste from a source either, as that sometimes includes special formatting. Other types of server errors are mentioned in the documentation.
+
+- I am getting a lot of errors, and the UI looks incorrect. How do I rectify this?
+
+Please do not change the directory of DeepVoice. Try to keep the directories pointing to the default values: DeepVoice folder under Assets and Voices folder under Assets/DeepVoice.
+
+- Where can I find my voices that I have generated? How do I preview the audio clips in the editor?
+
+The default location for the audio clips is Assets/DeepVoice/Voices. You can find the voices that you generate in that folder. To preview a voice, simply select the audio clip and hover your cursor over the DeepVoice window. This will make the audio clip visible and interactable in the window. Press on the play button to hear the audio clip.
+
+- I need to generate more audio clips than the current limit. How can I increase my quota?
+
+Currently, we do not offer paid quota increases, but we are working on such a system. A workaround would be to buy another copy of the asset and use that invoice number so you can generate twice the limit. However, we do not recommend this method.

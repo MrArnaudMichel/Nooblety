@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16e753d00bf481a94334461ae6f3755, type: 3}
+  m_Name: Time
+  m_EditorClassIdentifier: 
+  m_ID:
+    m_String: time
+  m_Data:
+    m_MinValue: 0
+    m_MaxValue: {fileID: 11400000, guid: 78bc60e7c5490644986bb04a18cc9746, type: 2}
+    m_StartPercent: 1
+  m_Info:
+    m_Name:
+      m_Property:
+        rid: 3885427369319596096
+    m_Acronym:
+      m_Property:
+        rid: 3885427369319596097
+    m_Description:
+      m_Property:
+        rid: 3885427369319596098
+    m_Icon:
+      m_Property:
+        rid: 3885427369319596099
+    m_Color: {r: 1, g: 1, b: 1, a: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3885427369319596096
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Attribute Name
+    - rid: 3885427369319596097
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: ATT
+    - rid: 3885427369319596098
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Description...
+    - rid: 3885427369319596099
+      type: {class: GetSpriteNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}

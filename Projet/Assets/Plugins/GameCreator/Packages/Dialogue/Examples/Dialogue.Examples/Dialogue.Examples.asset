@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7734bdb5c6ff542a7a94b0aec1b2782c, type: 3}
+  m_Name: Dialogue.Examples
+  m_EditorClassIdentifier: 
+  m_Install:
+    m_Name: Examples
+    m_Module: Dialogue
+    m_Description: Example scenes for the Dialogue module
+    m_Author: Catsoft Works
+    m_Version:
+      major: 1
+      minor: 2
+      patch: 10
+    m_Complexity: 0
+    m_Dependencies:
+    - m_ID: GameCreator.Blockout
+      m_MinVersion:
+        major: 1
+        minor: 4
+        patch: 10
+    - m_ID: GameCreator.Characters
+      m_MinVersion:
+        major: 1
+        minor: 6
+        patch: 19
+    - m_ID: Dialogue.SkinDefault
+      m_MinVersion:
+        major: 1
+        minor: 1
+        patch: 5
+    - m_ID: Dialogue.SkinCyberpunk
+      m_MinVersion:
+        major: 1
+        minor: 1
+        patch: 4
+    - m_ID: Dialogue.SkinPixel
+      m_MinVersion:
+        major: 1
+        minor: 1
+        patch: 3
+    - m_ID: Dialogue.SkinMessage
+      m_MinVersion:
+        major: 1
+        minor: 1
+        patch: 4

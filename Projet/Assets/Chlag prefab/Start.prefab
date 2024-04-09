@@ -1,0 +1,2121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1944196644956368373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6124127751741303268}
+  - component: {fileID: 2618256646554553099}
+  - component: {fileID: 5442486208192243464}
+  m_Layer: 0
+  m_Name: Ge3PlayerInit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6124127751741303268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944196644956368373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1752744639124017125}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2618256646554553099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944196644956368373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 605635541715648554
+  m_TriggerEvent:
+    rid: 605635541715648550
+  references:
+    version: 2
+    RefIds:
+    - rid: 605635541715648550
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 605635541715648554
+      type: {class: InstructionLogicRunConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Property:
+            rid: 605635541715648555
+        m_WaitToFinish: 1
+    - rid: 605635541715648555
+      type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Conditions: {fileID: 5442486208192243464}
+--- !u!114 &5442486208192243464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944196644956368373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721fb82976bce47f38247178301b66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Branches:
+    m_Branches:
+    - rid: 605635541715648556
+  references:
+    version: 2
+    RefIds:
+    - rid: 605635541715648556
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: 
+        m_ConditionList:
+          m_Conditions:
+          - rid: 605635541715648557
+        m_InstructionList:
+          m_Instructions:
+          - rid: 605635541715648608
+          - rid: 605635541715648561
+          - rid: 605635541715648592
+          - rid: 1676344369264721939
+          - rid: 2959905577438806024
+    - rid: 605635541715648557
+      type: {class: ConditionMathCompareDecimals, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 605635541715648560
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 605635541715648559
+    - rid: 605635541715648559
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 2
+    - rid: 605635541715648560
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+          m_Name:
+            m_String: NumberofAncestors
+            m_ID: 1141336371
+    - rid: 605635541715648561
+      type: {class: InstructionTransformChangePosition, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Transform:
+          m_Property:
+            rid: 605635541715648595
+        m_Position:
+          m_Operation: 0
+          m_Value:
+            m_Property:
+              rid: 605635541715648563
+        m_Space: 0
+        m_Transition:
+          m_Duration: 0
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 605635541715648563
+      type: {class: GetPositionVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Position: {x: 15, y: 3, z: -17}
+    - rid: 605635541715648592
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 605635541715648593
+        m_IsControllable:
+          m_Property:
+            rid: 605635541715648594
+    - rid: 605635541715648593
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 605635541715648594
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 605635541715648595
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 605635541715648608
+      type: {class: InstructionCommonTimeFrame, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Frames:
+          m_Property:
+            rid: 605635541715648609
+    - rid: 605635541715648609
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 1676344369264721939
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1676344369264721940
+        m_Active:
+          m_Property:
+            rid: 1676344369264721941
+    - rid: 1676344369264721940
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+    - rid: 1676344369264721941
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 2959905577438806024
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 2959905577438806025
+        m_From:
+          m_Property:
+            rid: 2959905577438806026
+    - rid: 2959905577438806025
+      type: {class: SetBoolLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable:
+            rid: 2959905577438806027
+          m_Name:
+            m_String: Menu-is-closed
+            m_ID: 165759856
+    - rid: 2959905577438806026
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 2959905577438806027
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 2959905577438806028
+    - rid: 2959905577438806028
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+--- !u!1 &2468271451468209742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4476027802524646467}
+  - component: {fileID: 8036386055886642395}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4476027802524646467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468271451468209742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 79101489288937509}
+  - {fileID: 8380421428491609755}
+  - {fileID: 1752744639124017125}
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8036386055886642395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468271451468209742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 896804114135252993
+    - rid: 896804154881343518
+    - rid: 2959905577438806326
+    - rid: 896804154881343520
+  m_TriggerEvent:
+    rid: 896804114135252992
+  references:
+    version: 2
+    RefIds:
+    - rid: 896804114135252992
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 896804114135252993
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 896804114135252994
+        m_IsControllable:
+          m_Property:
+            rid: 896804114135252995
+    - rid: 896804114135252994
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 896804114135252995
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 896804154881343518
+      type: {class: InstructionCommonTimeWait, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Seconds:
+          m_Property:
+            rid: 896804154881343519
+        m_Mode:
+          m_UpdateTime: 0
+    - rid: 896804154881343519
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 10
+    - rid: 896804154881343520
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 896804154881343523
+        m_From:
+          m_Property:
+            rid: 896804154881343522
+    - rid: 896804154881343522
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 896804154881343523
+      type: {class: SetBoolLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable:
+            rid: 896804154881343524
+          m_Name:
+            m_String: Menu-is-closed
+            m_ID: 165759856
+    - rid: 896804154881343524
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 896804154881343525
+    - rid: 896804154881343525
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+    - rid: 2959905577438806326
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 2959905577438806327
+    - rid: 2959905577438806327
+      type: {class: ConditionMathCompareDecimals, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 2959905577438806330
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 2959905577438806329
+    - rid: 2959905577438806329
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 2959905577438806330
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+          m_Name:
+            m_String: NumberofAncestors
+            m_ID: 1141336371
+--- !u!1 &4286501902023408461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6294679073517156111}
+  - component: {fileID: 2688477765370589862}
+  - component: {fileID: 1762895412421576426}
+  m_Layer: 0
+  m_Name: Ge2PlayerInit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6294679073517156111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286501902023408461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1752744639124017125}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2688477765370589862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286501902023408461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 605635541715648554
+  m_TriggerEvent:
+    rid: 605635541715648550
+  references:
+    version: 2
+    RefIds:
+    - rid: 605635541715648550
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 605635541715648554
+      type: {class: InstructionLogicRunConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Property:
+            rid: 605635541715648555
+        m_WaitToFinish: 1
+    - rid: 605635541715648555
+      type: {class: GetGameObjectConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Conditions: {fileID: 1762895412421576426}
+--- !u!114 &1762895412421576426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286501902023408461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721fb82976bce47f38247178301b66c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Branches:
+    m_Branches:
+    - rid: 605635541715648556
+  references:
+    version: 2
+    RefIds:
+    - rid: 605635541715648556
+      type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Description: 
+        m_ConditionList:
+          m_Conditions:
+          - rid: 605635541715648557
+        m_InstructionList:
+          m_Instructions:
+          - rid: 605635541715648608
+          - rid: 605635541715648561
+          - rid: 605635541715648592
+          - rid: 1676344369264721936
+          - rid: 2959905577438806018
+    - rid: 605635541715648557
+      type: {class: ConditionMathCompareDecimals, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 1
+        m_Value:
+          m_Property:
+            rid: 605635541715648560
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 605635541715648559
+    - rid: 605635541715648559
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 605635541715648560
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+          m_Name:
+            m_String: NumberofAncestors
+            m_ID: 1141336371
+    - rid: 605635541715648561
+      type: {class: InstructionTransformChangePosition, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Transform:
+          m_Property:
+            rid: 605635541715648595
+        m_Position:
+          m_Operation: 0
+          m_Value:
+            m_Property:
+              rid: 605635541715648563
+        m_Space: 0
+        m_Transition:
+          m_Duration: 0
+          m_Easing: 3
+          m_Time: 0
+          m_WaitToComplete: 1
+    - rid: 605635541715648563
+      type: {class: GetPositionVector3, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Position: {x: 107, y: -17, z: -3}
+    - rid: 605635541715648592
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 605635541715648593
+        m_IsControllable:
+          m_Property:
+            rid: 605635541715648594
+    - rid: 605635541715648593
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 605635541715648594
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 605635541715648595
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 605635541715648608
+      type: {class: InstructionCommonTimeFrame, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Frames:
+          m_Property:
+            rid: 605635541715648609
+    - rid: 605635541715648609
+      type: {class: GetDecimalInteger, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 1676344369264721936
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 1676344369264721937
+        m_Active:
+          m_Property:
+            rid: 1676344369264721938
+    - rid: 1676344369264721937
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+    - rid: 1676344369264721938
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 2959905577438806018
+      type: {class: InstructionBooleanSetBool, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Set:
+          m_Property:
+            rid: 2959905577438806021
+        m_From:
+          m_Property:
+            rid: 2959905577438806020
+    - rid: 2959905577438806020
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 2959905577438806021
+      type: {class: SetBoolLocalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: boolean
+          m_Variable:
+            rid: 2959905577438806022
+          m_Name:
+            m_String: Menu-is-closed
+            m_ID: 165759856
+    - rid: 2959905577438806022
+      type: {class: PropertyGetGameObject, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Property:
+          rid: 2959905577438806023
+    - rid: 2959905577438806023
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+--- !u!1 &5119675789477399649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752744639124017125}
+  m_Layer: 0
+  m_Name: PlayerInitMultiGen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752744639124017125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119675789477399649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6294679073517156111}
+  - {fileID: 6124127751741303268}
+  m_Father: {fileID: 4476027802524646467}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3322312475160348677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4476027802524646467}
+    m_Modifications:
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.552269
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.002795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.595217
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526549877323641565, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Name
+      value: PlayerInit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.data[1]
+      value: 1676344369264722343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.data[2]
+      value: 1676344369264722351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.data[3]
+      value: 1676344369264722361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.data[4]
+      value: 1676344369264722369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.data[5]
+      value: 1676344369264722377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: m_Branches.m_Branches.Array.data[6]
+      value: 1676344369264722386
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722341]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722342]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722345]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722346]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722347]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterChangeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722349]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722350]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectInstance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722353]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722354]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722355]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722356]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterPropertyTimeMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722357]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterChangeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722359]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722360]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectInstance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722363]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722364]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722365]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterChangeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722367]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722368]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectInstance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722371]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722372]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722373]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterChangeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722375]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722376]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectInstance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722379]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722380]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722381]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterChangeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722383]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722384]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectInstance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.Branch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionTextEquals
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionCharacterChangeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722389]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetStringGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722390]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetStringString
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722391]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722392]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetGameObjectInstance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387].m_Sign
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722342].m_Value
+      value: Fermier
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722345].m_Value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722346].m_Value
+      value: Boulanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722353].m_Value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722354].m_Value
+      value: Cordonnier
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722363].m_Value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722364].m_Value
+      value: Charron
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722371].m_Value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722372].m_Value
+      value: Ecuyer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722379].m_Value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722380].m_Value
+      value: Marchand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722390].m_Value
+      value: Troubadour
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_Offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722356].m_TimeMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_Offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_Offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_Offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_Offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_Offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722356].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722350].m_GameObject
+      value: 
+      objectReference: {fileID: 1430396767194642, guid: 624582b3b65da9a45bc1d204b8a69122, type: 3}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722356].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722356].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722360].m_GameObject
+      value: 
+      objectReference: {fileID: 1682917823560798, guid: f9d0bec09311bef48aa1fb044570e5de, type: 3}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722368].m_GameObject
+      value: 
+      objectReference: {fileID: 1682917823560798, guid: f9d0bec09311bef48aa1fb044570e5de, type: 3}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722376].m_GameObject
+      value: 
+      objectReference: {fileID: 1890929502950978, guid: a8884fa09da891440a328b0212cd9ad4, type: 3}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722384].m_GameObject
+      value: 
+      objectReference: {fileID: 1841705985760018, guid: 4f671f96ada2b43438b517dbc501e523, type: 3}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722392].m_GameObject
+      value: 
+      objectReference: {fileID: 1793230569793294, guid: 24e2f7a008fde164698a13a05b6918f5, type: 3}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_Description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_MaterialSounds
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_MaterialSounds
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_MaterialSounds
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_MaterialSounds
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_MaterialSounds
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_MaterialSounds
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340].m_Text1.m_Property
+      value: 1676344369264722341
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722340].m_Text2.m_Property
+      value: 1676344369264722342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344].m_Text1.m_Property
+      value: 1676344369264722347
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722344].m_Text2.m_Property
+      value: 1676344369264722346
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_Model.m_Property
+      value: 1676344369264722350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352].m_Text1.m_Property
+      value: 1676344369264722355
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722352].m_Text2.m_Property
+      value: 1676344369264722354
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_Model.m_Property
+      value: 1676344369264722360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362].m_Text1.m_Property
+      value: 1676344369264722365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722362].m_Text2.m_Property
+      value: 1676344369264722364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_Model.m_Property
+      value: 1676344369264722368
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370].m_Text1.m_Property
+      value: 1676344369264722373
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722370].m_Text2.m_Property
+      value: 1676344369264722372
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_Model.m_Property
+      value: 1676344369264722376
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378].m_Text1.m_Property
+      value: 1676344369264722381
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722378].m_Text2.m_Property
+      value: 1676344369264722380
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_Model.m_Property
+      value: 1676344369264722384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387].m_Text1.m_Property
+      value: 1676344369264722389
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722387].m_Text2.m_Property
+      value: 1676344369264722390
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_Model.m_Property
+      value: 1676344369264722392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722341].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722347].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722355].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722365].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722373].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722381].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722389].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722341].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722347].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722348].m_Character.m_Property
+      value: 1676344369264722349
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722355].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722356].m_Character.m_Property
+      value: 1676344369264722357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722358].m_Character.m_Property
+      value: 1676344369264722359
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722365].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722366].m_Character.m_Property
+      value: 1676344369264722367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722373].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722374].m_Character.m_Property
+      value: 1676344369264722375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722381].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722382].m_Character.m_Property
+      value: 1676344369264722383
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722388].m_Character.m_Property
+      value: 1676344369264722391
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722389].m_Variable.m_Name.m_ID
+      value: -1013602792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722341].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722347].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722355].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722365].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722373].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722381].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722389].m_Variable.m_Name.m_String
+      value: Job
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722341].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722347].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722355].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722365].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722373].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722381].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722389].m_Variable.m_TypeID.m_String
+      value: string
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385].m_ConditionList.m_Conditions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[3885427369319596068].m_ConditionList.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_ConditionList.m_Conditions.Array.data[0]
+      value: 1676344369264722344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_ConditionList.m_Conditions.Array.data[0]
+      value: 1676344369264722352
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_ConditionList.m_Conditions.Array.data[0]
+      value: 1676344369264722362
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_ConditionList.m_Conditions.Array.data[0]
+      value: 1676344369264722370
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_ConditionList.m_Conditions.Array.data[0]
+      value: 1676344369264722378
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_ConditionList.m_Conditions.Array.data[0]
+      value: 1676344369264722387
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[3885427369319596068].m_ConditionList.m_Conditions.Array.data[1]
+      value: 1676344369264722340
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_InstructionList.m_Instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_InstructionList.m_Instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_InstructionList.m_Instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_InstructionList.m_Instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_InstructionList.m_Instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722385].m_InstructionList.m_Instructions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_InstructionList.m_Instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722343].m_InstructionList.m_Instructions.Array.data[0]
+      value: 1676344369264722348
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722351].m_InstructionList.m_Instructions.Array.data[0]
+      value: 1676344369264722358
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722361].m_InstructionList.m_Instructions.Array.data[0]
+      value: 1676344369264722366
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722369].m_InstructionList.m_Instructions.Array.data[0]
+      value: 1676344369264722374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722377].m_InstructionList.m_Instructions.Array.data[0]
+      value: 1676344369264722382
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530085875923382663, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+      propertyPath: managedReferences[1676344369264722386].m_InstructionList.m_Instructions.Array.data[0]
+      value: 1676344369264722388
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+--- !u!4 &79101489288937509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3387340215538255904, guid: c2908fa598a4b284f964737286ecaf60, type: 3}
+  m_PrefabInstance: {fileID: 3322312475160348677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4462801921015311880
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4476027802524646467}
+    m_Modifications:
+    - target: {fileID: 5027430359613022304, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_Name
+      value: Spawn Player - Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889677]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.InstructionLogicCheckConditions
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.VisualScripting.ConditionMathCompareDecimals
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889679]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetDecimalDecimal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889680]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Common.GetDecimalDecimal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889681]
+      value: GameCreator.Runtime.Core GameCreator.Runtime.Variables.GetDecimalGlobalName
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_Instructions.m_Instructions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_Instructions.m_Instructions.Array.data[2]
+      value: 7126250593243889677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_Sign
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[3885427327008506266].m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889679].m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889680].m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[3885427327008506275].m_Marker
+      value: 
+      objectReference: {fileID: 8521516887868186772}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889677].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[3885427327008506264].m_IsExpanded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[3885427327008506265].m_IsExpanded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[3885427327008506273].m_IsExpanded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889677].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889677].m_IsExpanded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_Breakpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_IsExpanded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_Value.m_Property
+      value: 7126250593243889679
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889681].m_Variable.m_Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889681].m_Variable.m_Name.m_ID
+      value: 1587448267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_CompareTo.m_Comparison
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889681].m_Variable.m_Name.m_String
+      value: location
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889681].m_Variable.m_TypeID.m_String
+      value: number
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889678].m_CompareTo.m_CompareTo.m_Property
+      value: 7126250593243889681
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889677].m_Conditions.m_Conditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110304909965433690, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: managedReferences[7126250593243889677].m_Conditions.m_Conditions.Array.data[0]
+      value: 7126250593243889678
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7114997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.058974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.0538354
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980752036162207759, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      propertyPath: m_Name
+      value: Marker Spawn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5027430359613022304, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9084101922047124549}
+  m_SourcePrefab: {fileID: 100100000, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+--- !u!1 &7772716933475444837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5027430359613022304, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+  m_PrefabInstance: {fileID: 4462801921015311880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9084101922047124549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772716933475444837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 7126250593243889677
+    - rid: 7126250593243889683
+    - rid: 7126250593243889686
+  m_TriggerEvent:
+    rid: 3885427327008506216
+  references:
+    version: 2
+    RefIds:
+    - rid: 3885427327008506216
+      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: 7126250593243889677
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 7126250593243889678
+    - rid: 7126250593243889678
+      type: {class: ConditionMathCompareDecimals, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
+        m_Value:
+          m_Property:
+            rid: 7126250593243889679
+        m_CompareTo:
+          m_Comparison: 0
+          m_CompareTo:
+            m_Property:
+              rid: 7126250593243889681
+    - rid: 7126250593243889679
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 0
+    - rid: 7126250593243889681
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 11400000, guid: 513f315bdc628cb4a893d28084d711f4, type: 2}
+          m_Name:
+            m_String: location
+            m_ID: 1587448267
+    - rid: 7126250593243889683
+      type: {class: InstructionCharacterPropertyIsControllable, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 7126250593243889684
+        m_IsControllable:
+          m_Property:
+            rid: 7126250593243889685
+    - rid: 7126250593243889684
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 7126250593243889685
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+    - rid: 7126250593243889686
+      type: {class: InstructionGameObjectSetActive, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 0
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_GameObject:
+          m_Property:
+            rid: 7126250593243889687
+        m_Active:
+          m_Property:
+            rid: 7126250593243889688
+    - rid: 7126250593243889687
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 0}
+    - rid: 7126250593243889688
+      type: {class: GetBoolValue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 1
+--- !u!4 &8380421428491609755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6509396338518027934, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+  m_PrefabInstance: {fileID: 4462801921015311880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8521516887868186772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6366326178775050385, guid: f2a197fd3894c19458b4b81d7a6117f7, type: 3}
+  m_PrefabInstance: {fileID: 4462801921015311880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b01c4c6ab8f24302816449b24f62efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
