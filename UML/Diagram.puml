@@ -1,0 +1,481 @@
+@startuml
+
+title Nooblety - Class Diagram
+
+package unity{
+    package core{
+        class Object{
+            - name: String
+            - hideFlags: HideFlags
+            + <<Create>> Object()
+            + Instantiate(): Object
+            + Destroy()
+            + GetInstanceID(): int
+            + Equals(other: Object): Boolean
+            + GetHashCode(): int
+        }
+
+        class Component{
+            + <<Create>> Component()
+            + GetComponent(type: System.Type): Component
+            + GetComponentInChildren(type: System.Type, includeInactive: Boolean): Component
+            + GetComponentInParent(type: System.Type, includeInactive: Boolean): Component
+            + GetComponents(type: System.Type): Component[]
+            + GetComponentsInChildren(type: System.Type, includeInactive: Boolean): Component[]
+            + GetComponentsInParent(type: System.Type, includeInactive: Boolean): Component[]
+        }
+        Component --|> Object
+
+        class Rigidbody{
+            + drag: float
+            + angularDrag: float
+            + mass: float
+            + useGravity: Boolean
+            + isKinematic: Boolean
+            + freezeRotation: Boolean
+            + constraints: RigidbodyConstraints
+            + collisionDetectionMode: CollisionDetectionMode
+            + rotation: Quaternion
+            + <<Create>> Rigidbody()
+            + AddForce(force: Vector3)
+            + AddForce(x: float, y: float, z: float)
+            + AddRelativeForce(force: Vector3)
+            + AddTorque(torque: Vector3)
+            + AddRelativeTorque(torque: Vector3)
+            + AddForceAtPosition(force: Vector3, position: Vector3)
+        }
+        Rigidbody --|> Component
+        Rigidbody *--> "1 \n - velocity" Vector3
+        Rigidbody *--> "1 \n - angularVelocity" Vector3
+        Rigidbody *--> "1 \n - inertiaTensorRotation" Quaternion
+        Rigidbody *--> "1 \n - inertiaTensor" Vector3
+        Rigidbody *--> "1 \n - centerOfMass" Vector3
+
+
+        class Transform{
+            # <<Create>> Transform()
+            + GetEulerAngles(): Vector3
+            + SetEulerAngles(eulerAngles: Vector3)
+            + Rotate(eulerAngles: Vector3)
+            + RotateAround(point: Vector3, axis: Vector3, angle: float)
+            + RotateAroundLocal(axis: Vector3, angle: float)
+        }
+        Transform --|> Component
+        Transform *--> "1 \n - position" Vector3
+        Transform *--> "1 \n - rotation" Quaternion
+        Transform *--> "1 \n - scale" Vector3
+
+        class GameObject{
+            + activeSelf: Boolean
+            + activeInHierarchy: Boolean
+            + isStatic: Boolean
+            + layer: int
+            + scene: Scene
+            + <<Create>> GameObject()
+            + GameObject(name: String, components: Component[])
+            + AddComponent(type: System.Type): Component
+            + AddComponent<T>(): T
+        }
+        GameObject --|> Object
+        GameObject *--> "* \n - components" Component
+        GameObject *--> "1 \n - transform" Transform
+        GameObject *--> "1 \n - rigidbody" Rigidbody
+
+        class Scene{
+            + name: String
+            + isLoaded: Boolean
+            + isDirty: Boolean
+            + rootCount: int
+            + buildIndex: int
+            + isSubScene: Boolean
+            + <<Create>> Scene()
+            + GetRootGameObjects(): GameObject[]
+            + GetRootGameObjects(listToFill: List<GameObject>)
+        }
+
+        class Vector3{
+            + x: float
+            + y: float
+            + z: float
+            + <<Create>> Vector3(x: float, y: float, z: float)
+        }
+
+        class Quaternion{
+            + x: float
+            + y: float
+            + z: float
+            + w: float
+            + <<Create>> Quaternion(x: float, y: float, z: float, w: float)
+        }
+
+        class Behaviour{
+            + enabled: Boolean
+            + isActiveAndEnabled: Boolean
+            + <<Create>> Behaviour()
+        }
+        Behaviour --|> Component
+
+        class MonoBehaviour{
+            + useGUILayout: Boolean
+            + runInEditMode: Boolean
+            + enabled: Boolean
+            + isActiveAndEnabled: Boolean
+            + <<Create>> MonoBehaviour()
+            + StartCoroutine(methodName: String): Coroutine
+            + StopCoroutine(methodName: String)
+            + StopAllCoroutines()
+            + Invoke(methodName: String, time: float)
+            + {static} print(message: Object)
+        }
+        MonoBehaviour --|> Behaviour
+
+        class Coroutine{
+            + isRunning: Boolean
+            + isDone: Boolean
+            + StartCoroutine(methodName: String): Coroutine
+            + StopCoroutine(methodName: String)
+            + StopAllCoroutines()
+            + <<Create>> Coroutine()
+        }
+        Coroutine --|> YieldInstruction
+
+        class YieldInstruction{
+            + <<Create>> YieldInstruction()
+        }
+        YieldInstruction --|> Object
+
+        class Camera{
+            + fieldOfView: float
+            + nearClipPlane: float
+            + farClipPlane: float
+            + orthographic: Boolean
+            + orthographicSize: float
+            + depth: float
+            + aspect: float
+            + cullingMask: int
+            + eventMask: int
+            + clearFlags: CameraClearFlags
+            + backgroundColor: Color
+            + rect: Rect
+            + pixelRect: Rect
+            + Camera()
+            + Render()
+            + RenderWithShader(shader: Shader, replacementTag: String)
+        }
+        Camera --|> Behaviour
+        Camera *--> "1 \n - scene" Scene
+
+        class Animation{
+            + playAutomatically: Boolean
+            + isPlaying: Boolean
+            + animatePhysics: Boolean
+            + cullingType: AnimationCullingType
+            + localBounds: Bounds
+            + <<Create>> Animation()
+            + Play()
+            + Play(PlayMode)
+            + CrossFade(name: String)
+            + CrossFade(name: String, fadeLength: float, mode: PlayMode)
+            + Blend(name: String)
+        }
+        Animation --|> Behaviour
+        Animation *--> "1 \n - clip" AnimationClip
+
+        class Animator{
+            + <<Create>> Animator()
+        }
+        Animator --|> Behaviour
+        Animator *--> "1 \n animations" Animation
+
+        class AnimationClip{
+            + length: float
+            + frameRate: float
+            + wrapMode: WrapMode
+            + localBounds: Bounds
+            + <<Create>> AnimationClip()
+        }
+
+        class Input{
+            + simulateMouseWithTouches: Boolean
+            + anyKey: Boolean
+            + anyKeyDown: Boolean
+            + inputString: String
+            + acceleration: Vector3
+            + compensateSensors: Boolean
+            + gyro: Gyroscope
+            + mousePosition: Vector3
+            + mouseScrollDelta: Vector3
+            + compositionString: String
+            + imeIsSelected: Boolean
+            + compositionCursorPos: Vector2
+            + eatKeyPressOnTextFieldFocus: Boolean
+            + <<Create>> Input()
+            + GetAxis(axisName: String): float
+            + GetAxisRaw(axisName: String): float
+            + GetButton(buttonName: String): Boolean
+            + GetButtonDown(buttonName: String): Boolean
+            + GetButtonUp(buttonName: String): Boolean
+            + GetKey(name: String): Boolean
+            + GetKeyDown(name: String): Boolean
+            + GetKeyUp(name: String): Boolean
+            + GetMouseButton(button: int): Boolean
+            + GetMouseButtonDown(button: int): Boolean
+            + GetMouseButtonUp(button: int): Boolean
+            + GetTouch(index: int): Touch
+            + GetJoystickNames(): String[]
+            + ResetInputAxes()
+        }
+
+        enum CollisionDetectionMode{
+            Discrete,
+            Continuous,
+            ContinuousDynamic
+        }
+    }
+}
+
+package Nooblety{
+    package core{
+        package character{
+            class character{
+                + id: int
+                + isDead: Boolean
+                + isPlayer: Boolean
+                + isControllable: Boolean
+                + speed: float
+                + rotation: float
+                + mass: float
+                + height: float
+                + radius: float
+                + gravity: float
+                + useAcceleration: Boolean
+                + acceleration: float
+                + deceleration: float
+                + interactionRadius: float
+                + 3dModel: Prefab
+                + <<Create>> character()
+                + Start()
+                + Update()
+                + FixedUpdate()
+                + LateUpdate()
+                + IsPlayer(): Boolean
+                + IsDead(): Boolean
+                + IsControllable(): Boolean
+                + GetID(): int
+                + GetDirection(): Vector3
+                + SetDirection(direction: Vector3)
+                + GetSpeed(): float
+                + SetSpeed(speed: float)
+                + GetRotation(): float
+                + SetRotation(rotation: float)
+                + GetMass(): float
+                + GetHeight(): float
+                + GetRadius(): float
+            }
+            character --|> GameObject
+            character *--> "1 \n + animator" Animator
+            character *--> "1 \n + direction" Vector3
+            character ..> "<<uses>>" MoveCharacter
+            character ..> "<<uses>>" CheckDialogue
+
+
+            class Player{
+                + name: String
+                + money: int
+                + relationScore: int
+                + timeleft: float
+                + job: String
+                + <<Create>> Player()
+                + GetName(): String
+                + GetMoney(): int
+                + GetRelationScore(): int
+                + GetTimeLeft(): float
+                + GetJob(): String
+                + SetName(name: String)
+                + AddMoney(amount: int)
+                + RemoveMoney(amount: int)
+                + AddRelationScore(amount: int)
+                + RemoveRelationScore(amount: int)
+                + SetTimeLeft(time: float)
+                + SetJob(job: String)
+            }
+            Player --|> character
+
+            class NPC{
+                + name: String
+                + generation: int
+                + <<Create>> NPC()
+            }
+            NPC --|> character
+            NPC *--> "1 \n + dialogue" Dialogue
+
+            class MoveCharacter{
+                + <<Create>> MoveCharacter()
+                + Start()
+                + Update()
+            }
+            MoveCharacter --|> MonoBehaviour
+
+            class CheckDialogue{
+                + <<Create>> CheckDialogue()
+                + Start()
+                + Update()
+            }
+            CheckDialogue --|> MonoBehaviour
+
+            class GenerationPersonnage {
+                - personnage: GameObject
+                - connectionString: string
+                - materials: Material[]
+                - dbConnection: IDbConnection
+                - good: int
+                - Champslocations: List<location>
+                - Banlieuelocations: List<location>
+                - Placelocations: List<location>
+                - actuel: List<location>
+                + Start()
+                + GenerateRandomCharatere(relationD: bool)
+                + TirageAleatoire(): int
+                - SelectRandomRow(tableName: string): IDataReader
+                - SelectRandomObject(idMetier: int): IDataReader
+                + createCharactere(prefab: GameObject, name: string, pos: Vector3, angle: float): GameObject
+                + createCharactereDialogue(charactere: GameObject, dialogue: string, change: List<float>): GameObject
+                + createCharactereDialogueRelation(charactere: GameObject, dialogue: string, change: List<float>): GameObject
+                + CreateDialogue(node: DialogueNode, personnage: GameObject, parent: int = -1)
+                + createNode(personnage: string, text: string, type: TNodeType, instructions: VisualScripting.Instruction[]): Node
+                + addInstruction(node: Node, instructions: VisualScripting.Instruction[])
+                + createSetStringInstruction(globalVariable: string, name: string, newValue: string): InstructionTextSetString
+                + createAddInstruction(globalVariable: string, name: string, value: double): InstructionArithmeticIncrementNumber
+                + test()
+            }
+            GenerationPersonnage --|> MonoBehaviour
+            GenerationPersonnage *--> "* \n - locations" Location
+
+            class Location {
+                + loc: Vector3
+                + angle: float
+                + <<Create>> Location(loc: Vector3, angle: float)
+            }
+        }
+        package camera{
+            enum Projection{
+                Perspective,
+                Orthographic
+            }
+
+            class CameraShot{
+                + isMainShot: Boolean
+                + <<Create>> CameraShot()
+            }
+            CameraShot --|> Camera
+            CameraShot *--> "1 \n + projection" Projection
+            CameraShot *--> "1 \n + target" Transform
+            CameraShot *--> "1 \n + offset" Vector3
+
+            class AnimationsShot{
+                + duration: float
+                + <<Create>> AnimationsShot()
+            }
+            AnimationsShot --|> CameraShot
+            AnimationsShot *--> "1 \n + PointA" Vector3
+            AnimationsShot *--> "1 \n + PointB" Vector3
+
+            class FollowShot{
+                + <<Create>> FollowShot()
+            }
+            FollowShot --|> CameraShot
+            FollowShot *--> "1 \n + target" Transform
+            FollowShot *--> "1 \n + distance" Vector3
+
+            class MakeTransparent {
+                - Active: bool
+                - checker: GameObject
+                - hitRadius: float
+                + Start(): void
+                + Update(): void
+                - GetAllObjectInTheWay(): void
+                - MakeObjectTransparent(): void
+                - MakeObjectOpaque(): void
+                - SetShadowOfObjectAndChildren(obj: GameObject, mode: bool): void
+            }
+            MakeTransparent --|> MonoBehaviour
+            MakeTransparent *--> "* \n - objectsToMakeTransparent" GameObject
+            MakeTransparent *--> "* \n - objectsAlreadyTransparent" GameObject
+            MakeTransparent *--> "1 \n - player" Transform
+            MakeTransparent *--> "1 \n - checker" GameObject
+            MakeTransparent *--> "1 \n - cam" Transform
+        }
+
+        package dialogue{
+            class Dialogue{
+                + dialogueSkin: GUISkin
+                + <<Create>> Dialogue()
+                + Start()
+                + Update()
+                + OnGUI()
+                + SetDialogue(dialogue: String)
+                + SetDialogue(dialogue: String, actor: Actor)
+            }
+            Dialogue --|> MonoBehaviour
+            Dialogue *--> "* \n + sentences" Sentence
+
+            class Actor{
+                + name: String
+                + description: String
+                + typewriterspeed: float
+            }
+
+            class CheckStartDialogue{
+                + <<Create>> CheckStartDialogue()
+                + Start()
+                + Update()
+            }
+            CheckStartDialogue --|> MonoBehaviour
+            CheckStartDialogue *--> "<<use>>" CheckDialogue
+
+            class Sentence{
+                + content: String
+                + duration: float
+                + <<Create>> Sentence()
+                + OnStart()
+                + OnFinish()
+            }
+            Sentence --|> MonoBehaviour
+            Sentence *--> "1 \n + actor" Actor
+
+            class DialogueNode {
+                - id: int
+                - text: string
+                - speaker: string
+                + <<Create>> DialogueNode(text: string, speaker: string)
+                + <<Create>> DialogueNode(text: string, instruction: VisualScripting.Instruction[])
+                + addChild(node: DialogueNode)
+                + getType(): TNodeType
+            }
+            DialogueNode --|> MonoBehaviour
+            DialogueNode *--> "* \n + children" DialogueNode
+
+            class DialogueTree {
+                - size: int
+                + <<Create>> DialogueTree(root: DialogueNode)
+                + find(id: int, node: DialogueNode = null): DialogueNode
+                + addchild(id: int, node: DialogueNode): int
+                + addchild(id: int, nodes: DialogueNode[]): List<int>
+            }
+            DialogueTree *--> "1 \n + root" DialogueNode
+        }
+        class SettingsMenu {
+            - toggle: Toggle
+            - slider: Slider
+            - variables: GlobalNameVariables
+            + QualityClick(qualityName: string): void
+            + ToggleVSync(): void
+            + VolumeChange(): void
+            + ChangeResolution(): void
+        }
+    }
+}
+Input --|> MonoBehaviour
+Input *--> "1 \n + target" Player
+
+@enduml
