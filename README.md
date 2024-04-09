@@ -36,10 +36,11 @@ Vous pouvez accéder au site internet de **Nooblety** sur ce __[lien](https://no
 ## Installation
 #### Installer le Jeu
 
+> [!IMPORTANT]
 > __Remarque :__ Le jeu est disponible sur Windows, Linux et MacOS.
 > L'antivirus Windows Defender peut bloquer l'installation du jeu. Si c'est le cas, cliquez sur "Plus d'infos" puis sur "Exécuter quand même".
 > Si vous avez un message d'erreur lors de l'installation, vérifiez que vous avez assez d'espace disque disponible.
-> Si vous rencontrez des problèmes lors de l'installation, faite une [issue](https://git.unistra.fr/t3-michel-morawien-kiefner/mod23-d)
+> Si vous rencontrez des problèmes lors de l'installation, faite une [issue]([https://git.unistra.fr/t3-michel-morawien-kiefner/mod23-d](https://github.com/MrArnaudMichel/T3/issues))
 
 ###### Windows
 - Aller dans le dossier Game puis dans le dossier Windows
