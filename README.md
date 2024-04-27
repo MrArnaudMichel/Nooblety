@@ -8,7 +8,7 @@
 ![PlantUML](https://img.shields.io/badge/PlantUML-100000?style=for-the-badge&logo=plantuml&logoColor=white)
 
 ![License](https://img.shields.io/badge/License-MIT-100000?style=for-the-badge)
-![Repo size](https://img.shields.io/badge/Repo%20size-1.9GB-100000?style=for-the-badge)
+![Repo size](https://img.shields.io/badge/Repo%20size-2.1GB-100000?style=for-the-badge)
 
 ## Table des matières
 - [Contributeurs](#contributeurs)
