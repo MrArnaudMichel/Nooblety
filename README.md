@@ -96,6 +96,7 @@ Vous pouvez accéder au site internet de **Nooblety** sur ce **[lien](https://no
 - Visual Studio
 - Git
 - Plastic SCM
+- Blender
 
 ## Systèmes d'exploitation
 - Windows
